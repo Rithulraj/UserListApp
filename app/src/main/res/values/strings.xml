@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">UserList</string>
+  <string name="first_name_last_name">%1$s %2$s</string>
+</resources>
