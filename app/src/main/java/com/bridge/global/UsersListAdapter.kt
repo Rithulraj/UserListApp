@@ -30,7 +30,7 @@ class UsersListAdapter(private val context: Context?, private val list: List<Dat
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     val item = list?.get(position)
     if (context != null) {
-      Glide.with(context).load(item?.avatar).into(holder.userImage)
+      Glide.with(context).load(item?.avatar).circleCrop().into(holder.userImage)
     }
     holder.name.text = context?.getString(R.string.first_name_last_name, item?.firstName, item?.lastName)
     holder.email.text = item?.email
