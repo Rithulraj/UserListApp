@@ -38,6 +38,8 @@ class MainViewModel(val userRepository: UserRepository?): ViewModel() {
         if (page == 1) {
           val users = userRepository?.getAllUsers()
           if (users?.isNotEmpty() == true) {
+            userList.clear()
+            userList.addAll(users)
             userListLiveData.postValue(users)
           }
         }
